@@ -1,0 +1,165 @@
+======================================================
+#modules/app/activity.py
+class forintent : 주어진 용도를 다를 수 있는 activity를 찾아준다.
+class info : 추출된 activity에 대해 정보를 가져온다.
+class start : activity를 시작한다.
+
+#modules/app/backup.py
+class backup : 백업 API를 사용하기 위한 패키지를 나열한다.
+
+#modules/app/broadcast.py
+class info : broadcast 수신자에 관한 정보를 가져온다.
+class send : intent를 사용해 broadcast를 보낸다.
+
+#modules/app/debuggable.py
+class Debuggable : 디버깅가능한 패키지를 찾는다.
+
+#modules/app/package.py
+class attackersurface : 패키지의 attack surface를 얻는다.
+class info : 설치된 패캐지에 대해 정보를 가져온다.
+class launchintent : 패키지의 시작 의도를 가져온다.
+class list : 패키지를 나열한다.
+class manifest : 패키지의 AndroidManifest.xml을 가져온다.
+class native : 어플리케이션에 탑재된 Native 라이브러리를 찾는다.
+class shareuid : uid를 공유하는 패키지를 찾는다.
+
+#modules/app/provider.py
+class Columns : 지정된 content provider URI의 열을 나열한다.
+class Delete : 지정된 content provider URI에서 삭제한다.
+class Download : 파일을 지원해주는 content provider로 부터 파일을 다운로드받는다.
+class Info : 내보낸 content provider에 대한 정보를 가져온다.
+class Insert : content provider에 내용을 추가한다.
+class Query : content provider에 대하여 질문을 하여 정보를 얻는다.
+class Read : content provider로 부터 지원하는 파일에 대한 정보를 가져온다.
+class Update : content provider에 대한 정보를 업데이트한다.
+
+#modules/app/service.py
+class Info : 전달된 서비스에 관한 정보를 가져온다.
+class Send : 서비스에게 메시지를 보내고 답변을 보여준다.
+class Start : 서비스를 시작한다.
+class Stop : 서비스를 멈춘다.
+
+----------------------------------------------------------------------------------------------
+#modules/auxiliary/web_content_resolver.py
+class WebContentResolver : content provider에게 웹 서비스 인터페이스를 시작한다.
+class Handler : contetnt provider에 대한 정보를 제공한다.
+-----------------------------------------------------------------------------------------------
+#modules/common/assets.py
+class Assets : Android Asset Manager와 상호작용을 할 수 있다.
+
+#modules/common/binding.py
+Mixin은 서비스에 바인딩학 메시지를 교환한다.
+
+#modules/common/busy_box.py
+class BusyBox : 에이전트로부터 BusyBox를 설치하고 사용하는 기능을 제공한다.
+
+#modules/common/exploit.py
+class Exploit : 모듈을 실행시킬 수 있다.
+
+#modules/common/file_system.py
+class FileSystem : 에이전트 파일 시스템과 상호작용을 할 수 있다.
+
+#modules/common/filtering.py
+class Filters : ReflectedTypes의 집합을 정렬할 수 있다.
+
+#modules/common/formatter.py
+class TableFormatter : 표 형식의 데이터 형식을 지정할 수 있다.
+
+#modules/common/intent_filter.py
+class IntentFilter : 이 drozer 모듈 mixin은 intent provider에게 필터 추출 기능을 제공한다.
+class Data : 스키마, host, 포트, 경로 등을 담는 클래스
+class Filter : 데이터를 필터링할 수 있다.
+
+#modules/common/loader.py
+class ClassLoader : 로컬 시스템에서 자바소스 코드를 불러오기 위한 유틸리티 메서드
+
+#modules/common/package_manager.py
+class PackageManager : Android Package Manger와 상호작용할 수 있다.
+
+#modules/common/path_completion.py
+: 에이전트에게 로컬 파일에 대한 경로 완료를 제공한다.
+
+#modules/common/provider.py
+class Provider: content provider와 상호작용을 한다.
+class ContentResolverProxy :  Java contentResolver 객체의 wrapper에 관하여 일부 요청을
+구성하고, 일부 요청을 처리하기 쉽게한다.
+class UnableToOpenFileException : 파일을 열 수 없을떄 처리하는 예외를 나타낸다.
+
+#modules/common/shell_code.py
+class ShellCode : 쉘 정보를 나타내준다.
+
+#modules/common/shell.py
+class Shell : Android 쉘이 명령어를 통해 실행할 수 있게끔 해준다.
+
+#modules/common/strings.py
+class String : 특정한 파일에서 ASCII 값을 찾는 string명령어를 실행한다.
+
+#modules/common/superuser.py
+class SuperUser : superuser가 바이너리 탐지 및 설치를 돕는 유틸리티 메서드를 나타낸다.
+
+#modules/common/vulnerability.py
+class Vulnerability : 특정 취약성에 대한 테스트 및 악용을 포함하는 모듈
+class VulnerabiltyScanner : 취약점에 지정된 경사를 검사하고 차례로 검사를 실행한다.
+
+#modules/common/zip_file.py
+class ZipFile : 압축된 아카이브 파일과 상호작용할 수 있다.
+---------------------------------------------------------------------------------------------------
+#modules/exploit/browser/normalize.py
+class Normalize : Webkit Node Normalize (CVE-2010-1759)
+
+#modules/exploit/browser/samsung_knox_smdm.py
+class KnoxsSMDM : Samsung Knox Suite의 새로운 등록을 해주고 UniversalMDMAApplication 응용 프로그램을 악용하여 불량 drozer 에이전트 설치
+
+#modules/exploit/browser/use_after_free_2_.py
+class UseAfterFree : Webkit Use After Free Exploit (Black Hat 2010)
+
+#modules/exploit/dos/remote.py
+class RemoteWipe_BrowserDelivery :  Samsung Galaxy S2에서 원격 지우기를 수행하는 USSD 코드를 호출해준다.
+
+#modules/exploit/fileformat/polaris_viewer4_generate/polaris_viewer4_bof_generator.py
+class Stack : 스택을 모델링하는 클래스로, 스택에 항목을 추가하고 스택에 ROP체인을 생성 할 수 있게 합니다.
+class PolarisViewerBoF_Generate : 폴라리스 뷰어 4 익스플로잇 DOCX을 생성해준다.
+
+--------------------------------------------------------------------------------------------------
+#modules/jdwp/check.py 
+class Check : @jdwp-control 을 열고 어떤 앱이 연결되었는지 본다.
+
+--------------------------------------------------------------------------------------------------
+#modules/pilfer/general/apn_provider.py
+class APNProvider : APN content provider를 읽는다.
+
+#modules/pilfer/general/settings_provider.py 
+class SettingsProvider : content provider 설정정보를 읽는다.
+
+--------------------------------------------------------------------------------------------------
+#modules/soceng/unknown_sources.py
+class UnknownSources : 관련 없는 drozer 에이전트를 브라우저에 전달해 사용자가 설치할 수 있게 한다.
+
+#modules/soceng/usb_debugging.py
+class USBDebugging :  drozer 에이전트를 USB 디버깅이 가능한 연결된 장치에 설치한다.
+--------------------------------------------------------------------------------------------------
+#modules/webview/addJavaScriptInterface.py
+class addJavaScriptInterface : 자바스크립트 인터페이스를 원격으로 조종해 웹에서 볼 수 있게한다.
+
+#modules/information/datetime.py
+class DateTime : 현재 시간과 날짜를 안드로이드 장치로부터 가져온다.
+
+#modules/information/device_ifo.py
+class DeviceInfo : 장치 정보를 가져온다.
+
+#modules/information/permissions.py
+class Permissions : 장치에 있는 패키지를 사용해 모든 허가권의 목록을 가져온다.
+
+#modules/payloads/shellcode/reverse_tcp_shell.py
+class ARMEABI : reverse TCP shell을 설치할 수 있다.
+
+#modules/payloads/shellcode/reverse_weasel.py
+class ARMEABI : TCP shell을 통해 weasel을 실행시킬 수 있다.
+
+#modules/payloads/weasel.py
+class ARMEABI : Shell 명령어를 통해 weasel을 전개시킬 수 있다.
+
+
+
+
+
